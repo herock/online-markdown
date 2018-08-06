@@ -10,9 +10,10 @@ module.exports = {
     entry: {
         index : './src/js/index.js'
     },
+    mode: 'none',
     //入口文件输出配置
     output: {
-        path: 'docs/js/',
+        path: '/Users/herock/Dev/online-markdown/docs/js',
         filename: '[name].js'
     },
     module: {

@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/barretlee/online-markdown",
   "dependencies": {
+    "ajv": "^6.5.2",
     "copy-webpack-plugin": "~4.0.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
@@ -35,6 +36,6 @@
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.1"
+    "webpack": "^4.16.5"
   }
 }
