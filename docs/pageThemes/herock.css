@@ -1,0 +1,48 @@
+.wrapper {
+  font-size: 16px;
+  /* font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif; */
+}
+.wrapper p {
+  font-size: 16px;
+  /* white-space: pre-line; */
+  line-height: 30px;
+  /* color: #4a4a4a; */
+  color: #333;
+  font-family: Optima-Regular, PingFangSC-light;
+}
+.wrapper blockquote {
+  line-height: 22px;
+}
+.wrapper blockquote p {
+  font-size: 14px;
+}
+.wrapper h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  /* background: #FEF401; */
+  border-left: 10px solid #fef401;
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0 10px 0 10px;
+}
+.wrapper h1 {
+  font-size: 28px;
+}
+.wrapper h2 {
+  /* font-size: 24px; */
+  font-size: 20px;
+}
+.wrapper h3 {
+  font-size: 20px;
+}
+.wrapper h4 {
+  font-size: 18px;
+}
+
+.wrapper ul li span, .wrapper ol li span {
+  line-height: 22px;
+  font-size: 14px !important;
+}

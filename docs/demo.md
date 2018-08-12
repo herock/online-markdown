@@ -1,95 +1,59 @@
-## 微信公众号格式化工具
+最近七年，我都在做互联网产品，其中前五年分别在创业公司和上市公司里，做别人的产品；近两年在创业，做自己的产品。
 
-GitHub 地址：[https://github.com/barretlee/online-markdown](https://github.com/barretlee/online-markdown)
+我的体会是：产品经理需要懂技术，创业者尤其需要。但前提是你总觉得有股憋不住的想要做点儿什么的冲动，如果打算混安稳日子，特别是在大公司，你什么都不需要懂，反而要小心别“知道的太多了”，傻人一生平安。
 
-> 使用微信公众号编辑器有一个十分头疼的问题——粘贴出来的代码，格式错乱，而且特别丑。这块编辑器能够解决这个问题。
+做产品这几年，和开发工程师打交道最多，和他们交流通常有两大忌：
 
-### Changelog
+### 一、忌不懂技术 Develop Skills
 
-- 适配 Android
-- 支持代码不转行，横向滚动条
-- 支持页面主题样式配置
+更准确的说，是不能缺乏设计、开发一个互联网产品基本的技术常识，比如至少要清楚一个网站从不存在到能被用户访问，需要哪些必须的环节；也要明白一个 App 从你的脑海走到用户的手机里，需要经历怎样的过程。
 
-### 代码示例
+1. 大跌大口大口大口大口
+2. 撒到发送到发送到发送到发送到发送到发
 
-```javascript
-var OnlineMarkdown = {
-  init: function() {
-    var self = this;
-    self.load().then(function() {
-      self.start()
-    }).fail(function(){
-      self.start();
-    });
-  },
-  start: function() {
-    this.updateOutput();
-  },
-  load: function() {
-    return $.ajax({
-      type: 'GET',
-      url: params.path || './demo.md',
-      dateType: 'text',
-      timeout: 2000
-    }).then(function(data) {
-      $('#input').val(data);
-    });
-  },
-  updateOutput: function () {
-    var val = this.converter.makeHtml($('#input').val());
-    $('#output .wrapper').html(val);
-    PR.prettyPrint();
-  }
-};
+有常识，当然不一定就能做出好产品，但没常识，就很象在村里呆了半辈子的人乍到城市，一举一动即使小心翼翼，也没法儿不透着突兀和不和谐。
 
-OnlineMarkdown.init();
-```
----
+- List1
+- list2
 
-上面是 `JavaScript`，下面是 `php`：
+很多公司都有完全不懂技术的产品人，大多年龄较长，也许是互联网出现的时候，他们已经过了充满好奇和渴望未知的年龄，不愿意放低身段去学习新东西，喜欢只凭着想象和自己的生活经验就开喷，间或以若干近期热门关键词作为点缀，以示自己尚蹲在潮流尖端。
 
-```php
-echo 'hello,world'
-```
+这样的人也许能忽悠某些领导，但一定不招工程师待见，他们可能什么都不说，但心里已经开始等着看笑话，交给他们的开发需求，自然也是能拖则拖、能蒙则蒙。
 
-### 表格示例
+### 二、忌懂技术
 
-| 品类 | 个数 | 备注 |
-|-----|-----|------|
-| 苹果 | 1   | nice |
-| 橘子 | 2   | job |
+我遇到不少工程师喜欢说：“只要产品需求明确，技术上一切都能实现。”
 
-### 关于小胡子哥
+这句话听起来相当豪迈，也让产品经理大为放心，觉得技术真是产品的坚强后盾。但其实传递了一个特别糟糕的信号。
 
-![微信公众号](http://md.barretlee.com/imgs/qrcode.jpg)
+当工程师这么说的时候，潜台词是：
 
----
+> “你弄好你自己的事儿就行了，别来管我！”
+>
+> 而且这种说法隐含着一个乐观但显然并不现实的假设：技术是无所不能的，他（掌握技术的人）也象灯神一样，可以实现你的任何愿望，只要你能明确的描述它。
 
-以上是用的比较多的，还装了几十个使用频度比较低的插件，主要包括 Snippet 和文件高亮配置，可以在这里查看：<https://gist.github.com/barretlee/a5170eb6ca1805f66687063d2e3a4983>，你也可以通过 `Settings Sync` 将这个配置下载下来，id 就是后面半截：`a5170eb6ca1805f66687063d2e3a4983`。
+我不知道阿拉丁说完愿望之后，假如胆敢继续追问灯神将具体采用何种技术方案来实现的话，会不会被塞到灯里，但我知道很多工程师在发现你关注技术层面过深的时候，都会有种领地被侵犯的感觉。
 
-### 在命令行打开 VSC
+这就是工程师维护自己专业槽的本能，与行业中其它角色相比，工程师地位不是最高，待遇也不是最好，还经常加班加的要死要活的，唯一得天独厚的优势，就是**专业槽比任何角色都深**。关于产品、关于UI、甚至关于商业模式每个从业人员都能喷上几句，要是说到用户体验，那更是连业外人士都敢大喷特喷而没有任何心理负担：反正我就是用户嘛，越傻越光荣。而一旦涉及到代码，大多数人就直接晕菜了。比如下面这样的代码：
 
-在安装好 VSC 后，直接配置 `.bash_profile` 或者 `.zshrc` 文件：
-
-```bash
-alias vsc='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code';
-VSC_BIN='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin';
-PATH=$VSC_BIN:$PATH;
-export PATH;
+```py
+@list_route(methods=['post'], permission_classes=[XcxPluginPermission])
+  def xcx_plugin(self, request):
+      user = request.user
+      print("*" * 40)
+      print(user)
+      print("*" * 40)
+      if user.is_anonymous:
+          user = MyUser.objects.get(id=1)
+      data = request.data
+      serializer = CreateExerciseSerializer(data=data)
+      if serializer.is_valid():
+          serializer.create(data, user)
+          return Response(serializer.data, status=status.HTTP_201_CREATED)
+      else:
+          return Response(serializer.errors)
 ```
 
-然后让配置生效，在控制台执行：
+想想那些UI设计师的苦逼段子，工作时没有喷子们指手划脚的干扰，真是上帝赋予工程师独有的恩赐。
 
-```bash
-# 如果没有安装 zsh，可能是 ~/.bash_profile
-source ~/.zshrc 
-```
-
-这个时候就可以在全局打开了：
-
-```bash
-# -a 的意思是不要新开窗口，在当前已经打开的 vsc 中打开文件
-vsc path/to/file.ext -a 
-```
-
-有同学提到，VSC 的面板上搜索 `install` 就可以在命令行安装 `code` 这个命令了，不过我更喜欢使用 `vsc` 来打开文件，这也算是折腾吧 ；）
+所以当他们认为有外人正试图跨越这条槽时，自然会有所警惕，甚至体现出抵制和敌意。当一个产品经理发现工程师开始比较密集的使用术语或拼命把简单问题往复杂了说，你应该知道，他们在槽边开始向你射箭了。
