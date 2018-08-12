@@ -1,9 +1,13 @@
 body {
-  font-family: Optima-Regular, PingFangSC-light;
+  font-family: Avenir, -apple-system-font;
+}
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .wrapper {
   font-size: 16px;
-  font-family: Optima-Regular, PingFangSC-light;
+  font-family: Avenir, -apple-system-font;
 }
 .wrapper p {
   font-size: 16px;
@@ -11,21 +15,26 @@ body {
   /* line-height: 30px; */
   line-height: 160%;
   /* color: #4a4a4a; */
-  color: #333;
-}
-.wrapper h1, h2, h3, h4, h5, h6 {
-  margin: 30px 0 20px 0;
   /* color: #333; */
   color: #111;
-  border-left: 8px solid #fef401;
-  padding: 0 10px 0 10px;
-  font-family: Optima-Regular, PingFangSC-light;
+  font-family: Avenir, -apple-system-font;
+}
+.wrapper h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 0 0;
+  font-family: Avenir, -apple-system-font;
+  color: #111;
+  background: linear-gradient(to top, #fef401 50%, #fff 50%);
+  display: inline-block;
 }
 .wrapper blockquote {
   line-height: 22px;
+  background: #FBFAEF;
+  border-left: 10px solid #FAF699;
+  border-radius: 5px;
 }
 .wrapper blockquote p {
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 16px;
 }
 .wrapper h1 {
   font-size: 28px;
@@ -40,26 +49,17 @@ body {
   font-size: 18px;
 }
 
-/* .wrapper ul li, .wrapper ol li {
-  font-family: Optima-Regular, PingFangSC-light;
-} */
-div#outputCtt> ol> li> span> span, div#outputCtt> ul> li> span> span {
+.wrapper ul li span span, .wrapper ol li span span {
   line-height: 160%;
-  font-family: Optima-Regular, PingFangSC-light;
   font-size: 16px !important;
-  color: #333;
+  font-family: Avenir, -apple-system-font !important;
 }
-
-/* .wrapper ul li span span, .wrapper ol li span span {
-  line-height: 160%;
-  font-family: Optima-Regular, PingFangSC-light !important;
-  font-size: 16px !important;
-} */
 
 strong, b {
   /* font-weight: bold; */
   font-weight: normal;
-  background: #fef401;
+  /* background: #fef401; */
+  background: linear-gradient(to top, #fef401 50%, #fff 50%);
 }
 
 /* Code */
