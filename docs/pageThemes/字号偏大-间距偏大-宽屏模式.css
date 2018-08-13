@@ -5,6 +5,13 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+img {
+  border: none;
+  border-radius: 0;
+}
+.table {
+  font-size: 10px;
+}
 .wrapper {
   font-size: 16px;
   font-family: Avenir, -apple-system-font;
@@ -27,14 +34,18 @@ p {
   display: inline-block;
 }
 .wrapper blockquote {
-  line-height: 22px;
+  /* line-height: 22px; */
+  line-height: 160%;
+  border-radius: 5px;
+  /* 黄色调 */
   background: #FBFAEF;
   border-left: 10px solid #FAF699;
-  border-radius: 5px;
+  /* 灰色调 */
+  background: #F7F7F7;
+  border-left: 10px solid #EBEBEB;
 }
 .wrapper blockquote p {
-  /* font-size: 14px; */
-  font-size: 16px;
+  font-size: 15px;
 }
 .wrapper h1 {
   font-size: 28px;
