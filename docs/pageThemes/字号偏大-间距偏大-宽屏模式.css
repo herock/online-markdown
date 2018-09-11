@@ -37,9 +37,11 @@ img {
   /* line-height: 22px; */
   line-height: 160%;
   border-radius: 5px;
+
   /* 黄色调 */
-  background: #FBFAEF;
-  border-left: 10px solid #FAF699;
+  /* background: #FBFAEF;
+  border-left: 10px solid #FAF699; */
+
   /* 灰色调 */
   background: #F7F7F7;
   border-left: 10px solid #EBEBEB;
@@ -80,4 +82,13 @@ pre.prettyprint {
 div#outputCtt> pre> ol> li> span> span> code> span {
   font-size: 14px !important;
   font-family: monaco, menlo !important;
+}
+
+/* 表格 */
+table th {
+  white-space: nowrap; /*表头内容强制在一行显示*/
+}
+
+thead, tbody {
+  font-size: 12px;
 }
