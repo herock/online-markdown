@@ -92,3 +92,7 @@ table th {
 thead, tbody {
   font-size: 12px;
 }
+
+div.notice {
+  background: red;
+}
