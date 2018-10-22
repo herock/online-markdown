@@ -1,5 +1,5 @@
 body {
-  font-family: Avenir, -apple-system-font;
+  font-family: -apple-system-font;
 }
 p {
   margin-top: 20px;
@@ -14,7 +14,7 @@ img {
 }
 .wrapper {
   font-size: 16px;
-  font-family: Avenir, -apple-system-font;
+  font-family: -apple-system-font;
 }
 .wrapper p {
   font-size: 16px;
@@ -24,11 +24,11 @@ img {
   /* color: #4a4a4a; */
   /* color: #333; */
   color: #111;
-  font-family: Avenir, -apple-system-font;
+  font-family: -apple-system-font;
 }
 .wrapper h1, h2, h3, h4, h5, h6 {
   margin: 20px 0 0 0;
-  font-family: Avenir, -apple-system-font;
+  font-family: -apple-system-font;
   color: #111;
   background: linear-gradient(to top, #fef401 50%, #fff 50%);
   display: inline-block;
@@ -79,6 +79,9 @@ strong, b {
 pre.prettyprint {
   font-size: 14px;
 }
+pre.prettyprint.linenums {
+  border: none !important;
+}
 div#outputCtt> pre> ol> li> span> span> code> span {
   font-size: 14px !important;
   font-family: monaco, menlo !important;
@@ -95,4 +98,9 @@ thead, tbody {
 
 div.notice {
   background: red;
+}
+
+div.screenshot {
+  background: #ccc;
+  border: 1px solid red;
 }
