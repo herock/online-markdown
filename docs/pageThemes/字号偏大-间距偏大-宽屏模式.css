@@ -65,12 +65,17 @@ img {
 .wrapper ul li span span, .wrapper ol li span span {
   line-height: 160%;
   font-size: 16px !important;
-  font-family: Avenir, -apple-system-font !important;
+  font-family: -apple-system-font !important;
+}
+.wrapper ul li span span code span, .wrapper ol li span span code span {
+  /* line-height: 160%;*/
+  font-size: 14px !important;
+  font-family: monaco, menlo !important;
 }
 
 strong, b {
-  /* font-weight: bold; */
-  font-weight: normal;
+  font-weight: bold;
+  /* font-weight: normal; */
   /* background: #fef401; */
   background: linear-gradient(to top, #fef401 50%, #fff 50%);
 }
